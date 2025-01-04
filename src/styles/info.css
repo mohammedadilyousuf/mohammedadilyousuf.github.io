@@ -1,0 +1,41 @@
+.info {
+    padding: 24px;
+    background-color: #7e8b66;
+    background-size: cover; /* This ensures the background covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh; /* Ensures it spans at least the height of the viewport */
+    overflow: auto;
+    display: flex; /* Flexbox to align content */
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;!* Ensures text and image are aligned side by side *!*/
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 180px;
+}
+
+.profile-image {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: row;
+}
