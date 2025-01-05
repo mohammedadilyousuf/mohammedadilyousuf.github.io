@@ -30,7 +30,7 @@ function Info() {
                 </Typography>
                 <Typography variant="h6" sx={{color: '#F5F5DC', marginTop: '16px'}}>
                     I'm focused on building and enhancing Identity Platform at PayPal. With four years of industry experience,
-                    I have contributed to the platform that empower millions of users globally,
+                    I have contributed to the platform that empowers millions of users globally,
                     demonstrating my ability to solve complex problems and optimize systems for scalability and efficiency.
                 </Typography>
             </Box>
