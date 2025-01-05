@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import './styles/info.css';
+import profilePic from './assets/profile.png';
+import instagram from './assets/insta.png';
+import linkedin from './assets/linkedin.png';
+import github from './assets/github.png';
+import x from './assets/x.png';
+import email from './assets/email.png';
+
 
 function Info() {
     return (
@@ -31,7 +38,7 @@ function Info() {
             {/* Right side for image */}
             <Box className="profile-image" sx={{flex: 1, textAlign: 'center'}}>
                 <img
-                    src="src/assets/profile.png"
+                    src={profilePic}
                     alt="Profile"
                     style={{width: '350px', height: '350px', borderRadius: '50%'}}
                 />
@@ -39,31 +46,31 @@ function Info() {
                 <Box className="profiles">
                     <a href="https://www.linkedin.com/in/adilyousuf1234" target="_blank">
                         <img
-                            src="src/assets/linkedin.png"
+                            src={linkedin}
                             alt="linkedin"
                             style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
                     </a>
                     <a href="https://github.com/mohammedadilyousuf/" target="_blank">
                         <img
-                            src="src/assets/github.png"
+                            src={github}
                             alt="github"
                             style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
                     </a>
                     <a href="https://www.instagram.com/mohammed.adil.yousuf/" target="_blank">
                         <img
-                            src="src/assets/insta.png"
+                            src={instagram}
                             alt="instagram"
                             style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
                     </a>
                     <a href="https://x.com/Adil_Yousuf_" target="_blank">
                         <img
-                            src="src/assets/x.png"
+                            src={x}
                             alt="X"
                             style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
                     </a>
                     <a href="mailto:adilyousuf1234@gmail.com" target="_blank">
                         <img
-                            src="src/assets/email.png"
+                            src={email}
                             alt="X"
                             style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
                     </a>
