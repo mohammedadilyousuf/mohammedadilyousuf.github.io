@@ -1,0 +1,212 @@
+.experience-page {
+    padding: 24px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    position: relative;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.experience-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.experience-page > * {
+    position: relative;
+    z-index: 2;
+}
+
+.experience-container {
+    max-width: 900px;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 3rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1s ease-out;
+    margin-top: 2rem;
+}
+
+.experience-title {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.experience-timeline {
+    position: relative;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #4facfe, #00f2fe);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.experience-card {
+    position: relative;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out calc(0.4s + var(--delay, 0s)) both;
+    width: calc(50% - 2rem);
+}
+
+.experience-card:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.experience-card:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.experience-card:nth-child(odd)::before {
+    right: -2.5rem;
+}
+
+.experience-card:nth-child(even)::before {
+    left: -2.5rem;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.company-info {
+    flex: 1;
+}
+
+.duration-section {
+    text-align: right;
+}
+
+.experience-description {
+    margin-bottom: 1.5rem;
+}
+
+.description-item {
+    margin-bottom: 0.5rem;
+}
+
+.technologies {
+    margin-top: 1.5rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-tag {
+    padding: 0.3rem 0.8rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .experience-page {
+        padding: 16px;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+    
+    .experience-container {
+        padding: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .experience-timeline::before {
+        left: 1rem;
+        transform: none;
+    }
+    
+    .experience-card {
+        width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 3rem;
+    }
+    
+    .experience-card::before {
+        left: -0.5rem !important;
+        right: auto !important;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .duration-section {
+        text-align: left;
+    }
+    
+    .company-logo {
+        min-width: 50px !important;
+        height: 35px !important;
+        padding: 0.3rem 0.8rem !important;
+    }
+    
+    .company-logo Typography {
+        font-size: 0.8rem !important;
+    }
+}

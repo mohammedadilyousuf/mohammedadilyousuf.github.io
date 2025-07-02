@@ -16,34 +16,79 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = [];
-// const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'About', 'Skills', 'Experience'];
 
 function DrawerAppBar(props) {
-    const { window } = props;
+    const { window, onPageChange, currentPage } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
 
+    const handleNavItemClick = (item) => {
+        if (onPageChange) {
+            onPageChange(item);
+        }
+        setMobileOpen(false);
+    };
+
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                MOHAMMED ADIL YOUSUF
-            </Typography>
-            <Divider />
-            <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText
-                                primary={item}
-                            />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+        <Box onClick={handleDrawerToggle} sx={{ 
+            textAlign: 'center',
+            background: 'linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c)',
+            backgroundSize: '400% 400%',
+            animation: 'gradientShift 15s ease infinite',
+            height: '100%',
+            position: 'relative'
+        }}>
+            <Box sx={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'rgba(0, 0, 0, 0.4)',
+                zIndex: 1
+            }}/>
+            <Box sx={{ position: 'relative', zIndex: 2 }}>
+                <Typography variant="h6" sx={{ 
+                    my: 2, 
+                    color: '#FFFFFF',
+                    fontWeight: '700',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
+                }}>
+                    MOHAMMED ADIL YOUSUF
+                </Typography>
+                <Divider sx={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }} />
+                <List>
+                    {navItems.map((item) => (
+                        <ListItem key={item} disablePadding>
+                            <ListItemButton 
+                                sx={{ 
+                                    textAlign: 'center',
+                                    backgroundColor: currentPage === item ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                                    margin: '0.5rem 1rem',
+                                    borderRadius: '8px',
+                                    '&:hover': {
+                                        backgroundColor: 'rgba(255, 255, 255, 0.15)'
+                                    }
+                                }}
+                                onClick={() => handleNavItemClick(item)}
+                            >
+                                <ListItemText
+                                    primary={item}
+                                    sx={{
+                                        color: '#FFFFFF',
+                                        fontWeight: currentPage === item ? '700' : '500',
+                                        textShadow: '1px 1px 3px rgba(0,0,0,0.8)'
+                                    }}
+                                />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
+            </Box>
         </Box>
     );
 
@@ -52,7 +97,14 @@ function DrawerAppBar(props) {
     return (
         <Box>
             <CssBaseline />
-            <AppBar component="nav" style={{ background: '#53585F', position: 'fixed' }} >
+            <AppBar component="nav" sx={{ 
+                background: 'rgba(0, 0, 0, 0.3)', 
+                backdropFilter: 'blur(15px)',
+                WebkitBackdropFilter: 'blur(15px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                position: 'fixed',
+                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+            }} >
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -66,13 +118,40 @@ function DrawerAppBar(props) {
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        sx={{ 
+                            flexGrow: 1, 
+                            display: { xs: 'none', sm: 'block' },
+                            fontWeight: '700',
+                            fontSize: { sm: '1.1rem', md: '1.3rem' },
+                            textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
+                            background: 'linear-gradient(45deg, #FFFFFF, #E0E0E0)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text'
+                        }}
                     >
-                        <b>MOHAMMED ADIL YOUSUF</b>
+                        MOHAMMED ADIL YOUSUF
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff'}}>
+                            <Button 
+                                key={item} 
+                                sx={{ 
+                                    color: '#fff',
+                                    backgroundColor: currentPage === item ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                                    margin: '0 0.3rem',
+                                    borderRadius: '8px',
+                                    padding: '8px 16px',
+                                    fontWeight: currentPage === item ? '700' : '500',
+                                    textShadow: '1px 1px 3px rgba(0,0,0,0.8)',
+                                    transition: 'all 0.3s ease',
+                                    '&:hover': {
+                                        backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                                        transform: 'translateY(-2px)'
+                                    }
+                                }}
+                                onClick={() => handleNavItemClick(item)}
+                            >
                                 {item}
                             </Button>
                         ))}
