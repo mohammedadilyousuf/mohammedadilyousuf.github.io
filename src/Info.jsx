@@ -36,44 +36,80 @@ function Info() {
             </Box>
 
             {/* Right side for image */}
-            <Box className="profile-image">
-                <img
-                    src={profilePic}
-                    alt="Profile"
-                />
-                {/* Social Media Icons */}
-                <Box className="profiles">
-                    <a href="https://www.linkedin.com/in/adilyousuf1234" target="_blank">
-                        <img
-                            src={linkedin}
-                            alt="linkedin"
-                            style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
-                    </a>
-                    <a href="https://github.com/mohammedadilyousuf/" target="_blank">
-                        <img
-                            src={github}
-                            alt="github"
-                            style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
-                    </a>
-                    <a href="https://www.instagram.com/mohammed.adil.yousuf/" target="_blank">
-                        <img
-                            src={instagram}
-                            alt="instagram"
-                            style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
-                    </a>
-                    <a href="https://x.com/Adil_Yousuf_" target="_blank">
-                        <img
-                            src={x}
-                            alt="X"
-                            style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
-                    </a>
-                    <a href="mailto:adilyousuf1234@gmail.com" target="_blank">
-                        <img
-                            src={email}
-                            alt="Email"
-                            style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
-                    </a>
+            <Box className="profile-section">
+                <Box className="profile-image">
+                    <img
+                        src={profilePic}
+                        alt="Profile"
+                    />
                 </Box>
+                {/* Social Media Icons - desktop only */}
+                <Box className="profiles desktop-only">
+                <a href="https://www.linkedin.com/in/adilyousuf1234" target="_blank">
+                    <img
+                        src={linkedin}
+                        alt="linkedin"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="https://github.com/mohammedadilyousuf/" target="_blank">
+                    <img
+                        src={github}
+                        alt="github"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="https://www.instagram.com/mohammed.adil.yousuf/" target="_blank">
+                    <img
+                        src={instagram}
+                        alt="instagram"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="https://x.com/Adil_Yousuf_" target="_blank">
+                    <img
+                        src={x}
+                        alt="X"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="mailto:adilyousuf1234@gmail.com" target="_blank">
+                    <img
+                        src={email}
+                        alt="Email"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                </Box>
+            </Box>
+            
+            {/* Social Media Icons - mobile only */}
+            <Box className="profiles mobile-only">
+                <a href="https://www.linkedin.com/in/adilyousuf1234" target="_blank">
+                    <img
+                        src={linkedin}
+                        alt="linkedin"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="https://github.com/mohammedadilyousuf/" target="_blank">
+                    <img
+                        src={github}
+                        alt="github"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="https://www.instagram.com/mohammed.adil.yousuf/" target="_blank">
+                    <img
+                        src={instagram}
+                        alt="instagram"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="https://x.com/Adil_Yousuf_" target="_blank">
+                    <img
+                        src={x}
+                        alt="X"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
+                <a href="mailto:adilyousuf1234@gmail.com" target="_blank">
+                    <img
+                        src={email}
+                        alt="Email"
+                        style={{width: '50px', height: '50px', borderRadius: '20%'}}/>
+                </a>
             </Box>
         </Box>
     );

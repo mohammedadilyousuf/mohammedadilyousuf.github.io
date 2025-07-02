@@ -1,6 +1,7 @@
 .info {
     padding: 24px;
     padding-top: 88px;
+    padding-bottom: 60px;
     background-color: #7e8b66;
     background-size: cover;
     background-position: center;
@@ -20,8 +21,12 @@
         flex-direction: column;
         padding: 16px;
         padding-top: 120px;
+        padding-bottom: 80px;
         text-align: center;
         gap: 1rem;
+        min-height: calc(100vh - 200px);
+        align-items: center;
+        justify-content: flex-start;
     }
 }
 
@@ -46,7 +51,7 @@
     }
 }
 
-.profile-image {
+.profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,27 +59,17 @@
     max-width: 400px;
 }
 
+.profile-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .profile-image img {
     width: 350px;
     height: 350px;
     border-radius: 50%;
     object-fit: cover;
-}
-
-@media (max-width: 768px) {
-    .profile-image {
-        order: 1;
-        margin-bottom: 1rem;
-        max-width: 280px;
-        width: 100%;
-    }
-    
-    .profile-image img {
-        width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
 }
 
 .profiles {
@@ -86,14 +81,46 @@
     flex-wrap: nowrap;
 }
 
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    .profiles {
+    .profile-section {
+        order: 1;
+        margin-bottom: 1rem;
+        max-width: 280px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-image img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .desktop-only {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: flex;
+        order: 3;
         gap: 0.2rem;
         flex-wrap: nowrap;
         justify-content: center;
+        margin-top: 1rem;
     }
     
-    .profiles a img {
+    .mobile-only a img {
         width: 40px;
         height: 40px;
     }
