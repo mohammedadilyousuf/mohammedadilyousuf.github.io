@@ -6,9 +6,14 @@ import About from "./About.jsx";
 import Skills from "./Skills.jsx";
 import Experience from "./Experience.jsx";
 import Footer from "./Footer.jsx";
+import VisitorStats from "./VisitorStats.jsx";
+import VisitorTracker from "./utils/visitorTracker.js";
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
+  const [showStats, setShowStats] = useState(false);
+  const [visitorStats, setVisitorStats] = useState(null);
+  const [visitorTracker] = useState(() => new VisitorTracker());
 
   const handlePageChange = (page) => {
     const element = document.getElementById(page.toLowerCase());
@@ -16,6 +21,14 @@ function App() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setCurrentPage(page);
+  };
+
+  const toggleStats = () => {
+    if (!showStats) {
+      const stats = visitorTracker.getStats();
+      setVisitorStats(stats);
+    }
+    setShowStats(!showStats);
   };
 
   useEffect(() => {
@@ -43,7 +56,7 @@ function App() {
     <>
         <NavBar onPageChange={handlePageChange} currentPage={currentPage} />
         <div id="home">
-          <Info />
+          <Info onTripleClick={toggleStats} />
         </div>
         <div id="about">
           <About />
@@ -55,6 +68,9 @@ function App() {
           <Experience />
         </div>
         <Footer />
+        {showStats && visitorStats && (
+          <VisitorStats stats={visitorStats} onClose={() => setShowStats(false)} />
+        )}
     </>
   )
 }

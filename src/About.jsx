@@ -39,8 +39,8 @@ function About() {
                         fontWeight: '400',
                         textShadow: '1px 1px 3px rgba(0,0,0,0.8)'
                     }}>
-                        I'm focused on building and enhancing Identity Platform at PayPal. With 4.5 years of industry experience,
-                        I have contributed to the platform that empowers billions of transactions and millions of users globally,
+                        I specialize in building and enhancing secure identity platforms and authentication systems. With 4.5 years of industry experience,
+                        I have contributed to platforms that handle billions of transactions and serve millions of users globally,
                         demonstrating my ability to solve complex problems and optimize systems for scalability and efficiency.
                     </Typography>
                     

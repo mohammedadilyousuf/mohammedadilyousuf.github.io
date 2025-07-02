@@ -7,9 +7,11 @@ import './styles/info.css';
 import profilePic from './assets/profile.png';
 
 
-function Info() {
+function Info({ onTripleClick }) {
     const [displayText, setDisplayText] = useState('');
     const [isTyping, setIsTyping] = useState(true);
+    const [clickCount, setClickCount] = useState(0);
+    const [clickTimer, setClickTimer] = useState(null);
     const fullText = "I'm Adil!";
     
     useEffect(() => {
@@ -26,6 +28,35 @@ function Info() {
         
         return () => clearInterval(timer);
     }, []);
+
+    const handleNameClick = () => {
+        if (!onTripleClick) return;
+        
+        setClickCount(prev => prev + 1);
+        
+        if (clickTimer) {
+            clearTimeout(clickTimer);
+        }
+        
+        const timer = setTimeout(() => {
+            if (clickCount + 1 >= 5) {
+                onTripleClick();
+                setClickCount(0);
+            } else {
+                setClickCount(0);
+            }
+        }, 400);
+        
+        setClickTimer(timer);
+    };
+
+    useEffect(() => {
+        return () => {
+            if (clickTimer) {
+                clearTimeout(clickTimer);
+            }
+        };
+    }, [clickTimer]);
     
     return (
         <Box component="main" className="info home-page">
@@ -46,7 +77,22 @@ function Info() {
                     <Typography 
                         variant="h1" 
                         className={`typewriter ${isTyping ? 'typing' : ''}`}
-                        sx={{color: '#FFFFFF', fontWeight: '800', fontSize: {xs: '2.5rem', sm: '4rem', md: '6rem'}, textAlign: 'center', marginBottom: '0.5rem', textShadow: '3px 3px 6px rgba(0,0,0,0.8)'}}
+                        onClick={handleNameClick}
+                        sx={{
+                            color: '#FFFFFF', 
+                            fontWeight: '800', 
+                            fontSize: {xs: '2.5rem', sm: '4rem', md: '6rem'}, 
+                            textAlign: 'center', 
+                            marginBottom: '0.5rem', 
+                            textShadow: '3px 3px 6px rgba(0,0,0,0.8)',
+                            cursor: 'pointer',
+                            userSelect: 'none',
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                                transform: 'scale(1.02)',
+                                textShadow: '4px 4px 8px rgba(0,0,0,0.9)'
+                            }
+                        }}
                     >
                         {displayText}
                     </Typography>
@@ -60,6 +106,7 @@ function Info() {
 }
 
 Info.propTypes = {
+    onTripleClick: PropTypes.func,
     /**
      * Injected by the documentation to work in an iframe.
      * You won't need it on your project.
