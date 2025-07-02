@@ -5,26 +5,31 @@ import './styles/skills.css';
 
 function Skills() {
     const frontendSkills = [
+        { name: 'React', icon: '⚛️', level: 90 },
+        { name: 'Node.js', icon: '🟢', level: 85 },
         { name: 'JavaScript', icon: 'JS', level: 90 },
-        { name: 'React', icon: '⚛️', level: 85 },
-        { name: 'HTML/CSS', icon: '🌐', level: 95 },
-        { name: 'Web Development', icon: '💻', level: 88 }
+        { name: 'HTML/CSS', icon: '🌐', level: 95 }
     ];
 
     const backendSkills = [
-        { name: 'Java', icon: '☕', level: 90 },
+        { name: 'Spring MVC', icon: '🍃', level: 90 },
         { name: 'Spring Boot', icon: '🍃', level: 85 },
-        { name: 'Spring Authorization', icon: '🔐', level: 80 },
         { name: 'OAuth 2.0', icon: '🛡️', level: 85 },
-        { name: 'Node.js', icon: '🟢', level: 85 },
+        { name: 'Java', icon: '☕', level: 90 },
+        { name: 'Spring Batch', icon: '⚙️', level: 85 },
         { name: 'Express.js', icon: '⚡', level: 80 },
         { name: 'Python', icon: '🐍', level: 75 },
         { name: 'C', icon: '⚙️', level: 70 }
     ];
 
+    const dataManagementSkills = [
+        { name: 'Oracle', icon: '🏛️', level: 85 },
+        { name: 'SQL', icon: '🗄️', level: 85 },
+        { name: 'Database Design', icon: '📊', level: 80 }
+    ];
+
     const toolsSkills = [
         { name: 'Git', icon: '📚', level: 90 },
-        { name: 'SQL', icon: '🗄️', level: 85 },
         { name: 'CI/CD', icon: '🔄', level: 80 },
         { name: 'JUnit', icon: '✅', level: 85 },
         { name: 'Postman', icon: '📮', level: 88 }
@@ -79,10 +84,11 @@ function Skills() {
                     Skills & Technologies
                 </Typography>
 
-                <SkillSection title="Backend Development" skills={backendSkills} delay={0.2} />
-                <SkillSection title="Frontend & Web" skills={frontendSkills} delay={0.4} />
-                <SkillSection title="Tools & Testing" skills={toolsSkills} delay={0.6} />
-                <SkillSection title="Development Practices" skills={developmentSkills} delay={0.8} />
+                <SkillSection title="🚀 Back-End Development" skills={backendSkills} delay={0.2} />
+                <SkillSection title="🌐 Front-End Development" skills={frontendSkills} delay={0.4} />
+                <SkillSection title="📊 Data Management" skills={dataManagementSkills} delay={0.6} />
+                <SkillSection title="Tools & Testing" skills={toolsSkills} delay={0.8} />
+                <SkillSection title="Development Practices" skills={developmentSkills} delay={1.0} />
             </Box>
         </Box>
     );
