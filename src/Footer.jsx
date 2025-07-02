@@ -32,24 +32,26 @@ export default function Footer() {
                 }}
             >
                 <Toolbar sx={{ 
-                    minHeight: '50px', 
-                    padding: '0 1.5rem',
+                    minHeight: { xs: '60px', sm: '50px' }, 
+                    padding: { xs: '0 0.5rem', sm: '0 1.5rem' },
                     display: 'flex',
-                    flexDirection: 'row',
+                    flexDirection: { xs: 'column', sm: 'row' },
                     alignItems: 'center',
-                    justifyContent: 'flex-end',
+                    justifyContent: { xs: 'center', sm: 'flex-end' },
                     width: '100%',
-                    maxWidth: '100vw'
+                    maxWidth: '100vw',
+                    gap: { xs: '0.3rem', sm: 0 }
                 }}>
                     <Typography
                         variant="body2"
                         sx={{ 
                             color: '#FFFFFF', 
-                            textAlign: 'left',
+                            textAlign: { xs: 'center', sm: 'left' },
                             fontWeight: '500',
                             textShadow: '1px 1px 3px rgba(0,0,0,0.8)',
-                            fontSize: { xs: '0.8rem', sm: '0.875rem' },
-                            marginRight: 'auto'
+                            fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                            marginRight: { xs: 0, sm: 'auto' },
+                            whiteSpace: 'nowrap'
                         }}
                     >
                         © {new Date().getFullYear()} Mohammed Adil Yousuf. Crafted with ❤️
@@ -59,7 +61,7 @@ export default function Footer() {
                         display: 'flex', 
                         gap: { xs: '0.2rem', sm: '0.3rem' },
                         alignItems: 'center',
-                        marginLeft: 'auto'
+                        marginLeft: { xs: 0, sm: 'auto' }
                     }}>
                         <IconButton
                             component="a"
