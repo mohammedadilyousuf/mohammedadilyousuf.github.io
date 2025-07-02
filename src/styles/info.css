@@ -1,41 +1,100 @@
 .info {
     padding: 24px;
+    padding-top: 88px;
     background-color: #7e8b66;
-    background-size: cover; /* This ensures the background covers the entire section */
-    background-position: center; /* Centers the background image */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    height: 100vh; /* Ensures it spans at least the height of the viewport */
+    min-height: 100vh;
     overflow: auto;
-    display: flex; /* Flexbox to align content */
+    display: flex;
     justify-content: center;
     align-items: center;
-    /*text-align: center;!* Ensures text and image are aligned side by side *!*/
     flex-direction: row;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        padding: 16px;
+        padding-top: 120px;
+        text-align: center;
+        gap: 1rem;
+    }
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
+    text-align: left;
+    flex: 1;
+    max-width: 60%;
     margin-left: 180px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+        order: 2;
+    }
+}
+
 .profile-image {
-    height: 400px;
-    width: 400px;
     display: flex;
-    border-radius: 50%;
-    margin-bottom: 20px;
     flex-direction: column;
     align-items: center;
+    flex: 1;
+    max-width: 400px;
+}
+
+.profile-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        order: 1;
+        margin-bottom: 1rem;
+        max-width: 280px;
+        width: 100%;
+    }
+    
+    .profile-image img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
 
 .profiles {
     display: flex;
     flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+    .profiles {
+        gap: 0.2rem;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    
+    .profiles a img {
+        width: 40px;
+        height: 40px;
+    }
 }
