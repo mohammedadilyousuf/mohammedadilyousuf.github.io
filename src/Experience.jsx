@@ -3,16 +3,27 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import './styles/experience.css';
 import paypalLogo from './assets/paypal.png';
+import appleLogo from './assets/apple.png';
 
 function Experience() {
     const experiences = [
+        // {
+        //     company: 'Apple',
+        //     position: 'Software Engineer',
+        //     duration: 'Jul 2025 - Present',
+        //     location: 'Hyderabad, India',
+        //     description: [
+        //
+        //     ],
+        //     technologies: ['Java']
+        // },
         {
             company: 'PayPal',
             position: 'Software Engineer 2',
-            duration: 'Apr 2024 - Present',
+            duration: 'Apr 2024 - Jul 2025',
             location: 'Hyderabad, India',
             description: [
-                'Evaluating Spring Authorization Server to modernize legacy authorization infrastructure to OAuth 2.0/OpenID Connect standards while exploring Azure Cloud for cloud transformation journey',
+                'Evaluated Spring Authorization Server to modernize legacy authorization infrastructure to OAuth 2.0/OpenID Connect standards while exploring Azure Cloud for cloud transformation journey',
                 'Integrated authentication of Visa, Amex, MasterCard into the in-house 3DS Server, enabling secure processing of 1M transactions in 6 months—scaling from 500K in 5 months to the next 500K in just 30 days',
             ],
             technologies: ['Java', 'Spring Boot', 'OAuth 2.0', 'mTLS', 'Microservices']
@@ -41,7 +52,19 @@ function Experience() {
         }
     ];
 
-    const ExperienceCard = ({ experience, index }) => (
+    const ExperienceCard = ({ experience, index }) => {
+        const getLogo = (company) => {
+            switch (company) {
+                case 'Apple':
+                    return appleLogo;
+                case 'PayPal':
+                    return paypalLogo;
+                default:
+                    return paypalLogo;
+            }
+        };
+
+        return (
         <Box className="experience-card" style={{'--delay': `${index * 0.2}s`}}>
             <Box className="experience-header">
                 <Box className="company-info">
@@ -58,8 +81,8 @@ function Experience() {
                             boxShadow: '0 2px 8px rgba(0,0,0,0.2)'
                         }}>
                             <img 
-                                src={paypalLogo} 
-                                alt="PayPal" 
+                                src={getLogo(experience.company)} 
+                                alt={experience.company} 
                                 style={{
                                     height: '100%',
                                     width: 'auto',
@@ -133,7 +156,8 @@ function Experience() {
                 </Box>
             </Box>
         </Box>
-    );
+        );
+    };
 
     return (
         <Box component="main" className="experience-page">
