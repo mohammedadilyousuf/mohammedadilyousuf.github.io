@@ -7,26 +7,26 @@ import appleLogo from './assets/apple.png';
 
 function Experience() {
     const experiences = [
-        // {
-        //     company: 'Apple',
-        //     position: 'Software Engineer',
-        //     duration: 'Jul 2025 - Present',
-        //     location: 'Hyderabad, India',
-        //     description: [
-        //
-        //     ],
-        //     technologies: ['Java']
-        // },
+        {
+            company: 'Apple',
+            position: 'Software Engineer',
+            duration: 'Jul 2025 - Present',
+            location: 'Hyderabad, India',
+            description: [
+
+            ],
+            technologies: ['Java']
+        },
         {
             company: 'PayPal',
             position: 'Software Engineer 2',
             duration: 'Apr 2024 - Jul 2025',
             location: 'Hyderabad, India',
             description: [
-                'Evaluated Spring Authorization Server to modernize legacy authorization infrastructure to OAuth 2.0/OpenID Connect standards while exploring Azure Cloud for cloud transformation journey',
-                'Integrated authentication of Visa, Amex, MasterCard into the in-house 3DS Server, enabling secure processing of 1M transactions in 6 months—scaling from 500K in 5 months to the next 500K in just 30 days',
+                'Evaluated Spring Authorization Server to modernize legacy authorization infrastructure to OAuth 2.0/OpenID Connect standards while exploring Azure Cloud for cloud transformation journey.',
+                'Integrated authentication of Visa, Amex, MasterCard into the in-house 3DS Server, enabling secure processing of 1M transactions in 6 months—scaling from 500K in 5 months to the next 500K in just 30 days.',
             ],
-            technologies: ['Java', 'Spring Boot', 'OAuth 2.0', 'mTLS', 'Microservices']
+            technologies: ['Java', 'Spring Boot', 'Azure', 'OAuth 2.0', 'mTLS', 'Microservices']
         },
         {
             company: 'PayPal',
@@ -34,8 +34,9 @@ function Experience() {
             duration: 'Aug 2021 - Mar 2024',
             location: 'Hyderabad, India',
             description: [
-                'Developed centralized security solutions and enhanced system authorization',
-                'Built self-service tools and optimized legacy systems for better performance'
+                'Developed centralized security solutions and enhanced system authorization.',
+                'Built self-service tools and migrated legacy C++ system to Java for better performance.',
+                'Worked on Login with Email OTP feature, improving LSR and user experience for PayPal customers.'
             ],
             technologies: ['Java', 'Spring Boot', 'React', 'Node.js']
         },
@@ -45,8 +46,8 @@ function Experience() {
             duration: 'Feb 2021 - Jul 2021',
             location: 'Bangalore - Virtual',
             description: [
-                'Created automation tools and improved development workflows',
-                'Developed full-stack applications with API integrations'
+                'Created automation tools and improved development workflows.',
+                'Developed full-stack applications with API integrations.'
             ],
             technologies: ['Java', 'Spring Boot', 'JavaScript', 'React', 'Node.js']
         }

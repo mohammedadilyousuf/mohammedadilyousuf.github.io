@@ -97,7 +97,7 @@ function Info({ onTripleClick }) {
                         {displayText}
                     </Typography>
                     <Typography variant="h4" className="fade-in-text-delayed" sx={{color: '#E0E0E0', fontWeight: '600', fontSize: {xs: '1.2rem', sm: '1.5rem', md: '2.125rem'}, textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
-                        Software Engineer @PayPal
+                        Software Engineer @ Apple  | ex-PayPal
                     </Typography>
                 </Box>
             </Box>

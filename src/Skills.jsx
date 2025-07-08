@@ -32,7 +32,8 @@ function Skills() {
         { name: 'Git', icon: '📚', level: 90 },
         { name: 'CI/CD', icon: '🔄', level: 80 },
         { name: 'JUnit', icon: '✅', level: 85 },
-        { name: 'Postman', icon: '📮', level: 88 }
+        { name: 'Postman', icon: '📮', level: 88 },
+        { name: 'Azure', icon: '☁️', level: 25 }
     ];
 
     const developmentSkills = [

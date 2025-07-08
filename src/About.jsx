@@ -53,8 +53,7 @@ function About() {
                     }}>
                         When I'm not coding, you'll find me exploring new destinations 🌍 - I have a deep passion for 
                         travel and discovering different cultures. I'm also an avid gamer 🎮, whether it's strategic gameplay or 
-                        immersive adventures that help me unwind and think creatively. I believe in continuous learning, contributing 
-                        to open-source projects, and staying updated with the latest trends in software development.
+                        immersive adventures that help me unwind and think creatively. I believe in continuous learning and staying updated with the latest trends in the industry.
                     </Typography>
                 </Box>
             </Box>
