@@ -12,8 +12,8 @@ function Experience() {
             duration: 'Apr 2024 - Present',
             location: 'Hyderabad, India',
             description: [
-                'Architected and modernized authentication systems for high-scale applications',
-                'Integrated third-party payment services and improved system performance'
+                'Evaluating Spring Authorization Server to modernize legacy authorization infrastructure to OAuth 2.0/OpenID Connect standards while exploring Azure Cloud for cloud transformation journey',
+                'Integrated authentication of Visa, Amex, MasterCard into the in-house 3DS Server, enabling secure processing of 1M transactions in 6 months—scaling from 500K in 5 months to the next 500K in just 30 days',
             ],
             technologies: ['Java', 'Spring Boot', 'OAuth 2.0', 'mTLS', 'Microservices']
         },
