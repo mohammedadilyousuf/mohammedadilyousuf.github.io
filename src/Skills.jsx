@@ -8,13 +8,17 @@ function Skills() {
         { name: 'React', icon: '⚛️', level: 90 },
         { name: 'Node.js', icon: '🟢', level: 85 },
         { name: 'JavaScript', icon: 'JS', level: 90 },
-        { name: 'HTML/CSS', icon: '🌐', level: 95 }
+        { name: 'HTML/CSS', icon: '🌐', level: 95 },
+        { name: 'Android Development', icon: '📱', level: 40 }
     ];
 
     const backendSkills = [
-        { name: 'Spring MVC', icon: '🍃', level: 90 },
+        { name: 'OAuth 2.0', icon: '🔑', level: 85 },
+        { name: 'OIDC', icon: '🔐', level: 85 },
+        { name: 'Authentication', icon: '🔓', level: 90 },
+        { name: 'Authorization', icon: '🛡️', level: 90 },
         { name: 'Spring Boot', icon: '🍃', level: 85 },
-        { name: 'OAuth 2.0', icon: '🛡️', level: 85 },
+        { name: 'API Security', icon: '🔒', level: 85 },
         { name: 'Java', icon: '☕', level: 90 },
         { name: 'Spring Batch', icon: '⚙️', level: 85 },
         { name: 'Express.js', icon: '⚡', level: 80 },
@@ -25,7 +29,7 @@ function Skills() {
     const dataManagementSkills = [
         { name: 'Oracle', icon: '🏛️', level: 85 },
         { name: 'SQL', icon: '🗄️', level: 85 },
-        { name: 'Database Design', icon: '📊', level: 80 }
+        { name: 'Cosmos', icon: '🌌', level: 30 }
     ];
 
     const toolsSkills = [
@@ -33,12 +37,14 @@ function Skills() {
         { name: 'CI/CD', icon: '🔄', level: 80 },
         { name: 'JUnit', icon: '✅', level: 85 },
         { name: 'Postman', icon: '📮', level: 88 },
-        { name: 'Azure', icon: '☁️', level: 25 }
+        { name: 'Azure', icon: '☁️', level: 30 }
     ];
 
-    const developmentSkills = [
-        { name: 'Android Development', icon: '📱', level: 75 },
-        { name: 'Agile Methodologies', icon: '🔁', level: 90 }
+    const methodologySkills = [
+        { name: 'Agile Methodologies', icon: '🔁', level: 90 },
+        { name: 'Scrum', icon: '🏉', level: 85 },
+        { name: 'Retrospectives', icon: '🔄', level: 80 },
+        { name: 'Pair Programming', icon: '👥', level: 90 }
     ];
 
     const SkillSection = ({ title, skills, delay }) => (
@@ -89,7 +95,7 @@ function Skills() {
                 <SkillSection title="🌐 Front-End Development" skills={frontendSkills} delay={0.4} />
                 <SkillSection title="📊 Data Management" skills={dataManagementSkills} delay={0.6} />
                 <SkillSection title="Tools & Testing" skills={toolsSkills} delay={0.8} />
-                <SkillSection title="Development Practices" skills={developmentSkills} delay={1.0} />
+                <SkillSection title="📋 Methodologies" skills={methodologySkills} delay={1.0} />
             </Box>
         </Box>
     );
