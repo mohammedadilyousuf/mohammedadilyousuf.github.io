@@ -4,6 +4,12 @@ import Typography from '@mui/material/Typography';
 import './styles/about.css';
 
 function About() {
+    const yearsOfExperience = (() => {
+        const start = new Date(2021, 1, 1); // Feb 2021
+        const years = (new Date() - start) / (1000 * 60 * 60 * 24 * 365.25);
+        return Math.floor(years * 2) / 2;
+    })();
+
     return (
         <Box component="main" className="about-page">
             <Box className="about-container">
@@ -39,9 +45,9 @@ function About() {
                         fontWeight: '400',
                         textShadow: '1px 1px 3px rgba(0,0,0,0.8)'
                     }}>
-                        I specialize in building scalable backend systems and distributed platforms. With 5.5+ years of industry experience,
-                        I have contributed to identity platforms handling billions of transactions at PayPal, and currently build retail publishing infrastructure
-                        that powers Apple's product catalog distribution across global markets.
+                        I specialize in building scalable backend systems and distributed platforms. With {yearsOfExperience}+ years of industry experience,
+                        I am currently building retail publishing systems that power Apple's product catalog distribution across global markets,
+                        and have contributed to identity platforms handling billions of transactions at PayPal.
                     </Typography>
                     
                     <Typography variant="h6" className="about-text" sx={{
