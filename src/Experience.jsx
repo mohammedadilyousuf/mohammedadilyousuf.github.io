@@ -13,9 +13,9 @@ function Experience() {
             duration: 'Jul 2025 - Present',
             location: 'Hyderabad, India',
             description: [
-
+                'Developing MultiMarket Publishing Systems as part of Retail Engineering, enabling scalable product catalog distribution across global markets and retail channels.'
             ],
-            technologies: ['Java']
+            technologies: ['Java', 'Spring Boot', 'CockroachDB', 'OpenAPI', 'Microservices']
         },
         {
             company: 'PayPal',
