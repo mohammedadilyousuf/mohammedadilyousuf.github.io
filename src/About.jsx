@@ -39,9 +39,9 @@ function About() {
                         fontWeight: '400',
                         textShadow: '1px 1px 3px rgba(0,0,0,0.8)'
                     }}>
-                        I specialize in building and enhancing secure identity platforms and authentication systems. With 4.5 years of industry experience,
-                        I have contributed to platforms that handle billions of transactions and serve millions of users globally,
-                        demonstrating my ability to solve complex problems and optimize systems for scalability and efficiency.
+                        I specialize in building scalable backend systems and distributed platforms. With 5+ years of industry experience,
+                        I have contributed to identity platforms handling billions of transactions at PayPal, and currently build retail publishing infrastructure
+                        that powers Apple's product catalog distribution across global markets.
                     </Typography>
                     
                     <Typography variant="h6" className="about-text" sx={{
