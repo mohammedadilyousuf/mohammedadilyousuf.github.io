@@ -39,7 +39,7 @@ function About() {
                         fontWeight: '400',
                         textShadow: '1px 1px 3px rgba(0,0,0,0.8)'
                     }}>
-                        I specialize in building scalable backend systems and distributed platforms. With 5+ years of industry experience,
+                        I specialize in building scalable backend systems and distributed platforms. With 5.5+ years of industry experience,
                         I have contributed to identity platforms handling billions of transactions at PayPal, and currently build retail publishing infrastructure
                         that powers Apple's product catalog distribution across global markets.
                     </Typography>
